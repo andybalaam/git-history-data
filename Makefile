@@ -1,0 +1,5 @@
+
+all: test
+
+test:
+	nosetests

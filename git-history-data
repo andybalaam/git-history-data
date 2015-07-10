@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+# Prerequisites:
+#
+# sudo apt-get install python-dateutil
+
+import sys
+
+from githistorydata.main import main
+
+if __name__ == "__main__":
+    main( sys.argv, sys.stdout, sys.stderr )
