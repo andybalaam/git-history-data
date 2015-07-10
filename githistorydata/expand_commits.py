@@ -2,7 +2,7 @@
 from githistorydata.codeline import CodeLine
 
 
-def expand_commits( log_lines ):
+def expand_authors( log_lines ):
     for log_line in log_lines:
         spl = log_line.author.split( "," )
         weight = 1.0 / len( spl )
