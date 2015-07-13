@@ -2,6 +2,8 @@
 from datetime import datetime
 import dateutil.parser
 
+from githistorydata.commitdetail import CommitDetail
+from githistorydata.filechanges import FileChanges
 from githistorydata.git import Git
 from githistorydata.logline import LogLine
 
@@ -13,6 +15,9 @@ class FakeGit( object ):
         self.ret_value = ret_value
 
     def git_log_pretty_tformat_H_ai_an( self ):
+        return self.ret_value.split( "\n" )
+
+    def git_show_numstat( self, commit_hash ):
         return self.ret_value.split( "\n" )
 
 
@@ -45,4 +50,43 @@ c504bd352d5d9dd0ccec3cd601ac02b14f4982a8 2015-07-09 12:00:00 -0200 Alban Tsui
             )
         ],
         git.log()
+    )
+
+
+def FileChanges_to_string__test():
+    assert_equal( "+3 -2 foo.txt", str( FileChanges( 3, 2, "foo.txt" ) ) )
+
+
+def CommitDetail_to_string__test():
+    assert_equal(
+        """myhash
+    +1 -0 x.cpp
+    +3 -2 y.cpp""",
+        str( CommitDetail(
+            "myhash",
+            [
+                FileChanges( 1, 0, "x.cpp" ),
+                FileChanges( 3, 2, "y.cpp" ),
+            ]
+        ) )
+    )
+
+
+def Numstat_lines_are_parsed__test():
+    git = Git( FakeGit( """2993dbf Lennart Tange "More generic dnd helper."
+71      0       scripts/drag_and_drop_helper.js
+0       66      scripts/dragdrop_pin_to_assemble.js
+23      16      src/step_definitions/StepDef.java
+""" ) )
+
+    assert_equal(
+        str( CommitDetail(
+            "2993bdfAAAAAAAAAAAA",
+            [
+                FileChanges( 71,  0, "scripts/drag_and_drop_helper.js" ),
+                FileChanges(  0, 66, "scripts/dragdrop_pin_to_assemble.js" ),
+                FileChanges( 23, 16, "src/step_definitions/StepDef.java" ),
+            ]
+        ) ),
+        str( git.show( "2993bdfAAAAAAAAAAAA" ) )
     )
