@@ -7,18 +7,9 @@ from githistorydata.filechanges import FileChanges
 from githistorydata.git import Git
 from githistorydata.logline import LogLine
 
+from tests.fakegit import FakeGit
+
 from nose.tools import assert_equal
-
-
-class FakeGit( object ):
-    def __init__( self, ret_value ):
-        self.ret_value = ret_value
-
-    def git_log_pretty_tformat_H_ai_an( self ):
-        return self.ret_value.split( "\n" )
-
-    def git_show_numstat( self, commit_hash ):
-        return self.ret_value.split( "\n" )
 
 
 def Log_lines_are_parsed__test():
@@ -59,11 +50,13 @@ def FileChanges_to_string__test():
 
 def CommitDetail_to_string__test():
     assert_equal(
-        """myhash
+        """myhash dt auth
     +1 -0 x.cpp
     +3 -2 y.cpp""",
         str( CommitDetail(
             "myhash",
+            "dt",
+            "auth",
             [
                 FileChanges( 1, 0, "x.cpp" ),
                 FileChanges( 3, 2, "y.cpp" ),
@@ -82,11 +75,13 @@ def Numstat_lines_are_parsed__test():
     assert_equal(
         str( CommitDetail(
             "2993bdfAAAAAAAAAAAA",
+            "dt",
+            "auth",
             [
                 FileChanges( 71,  0, "scripts/drag_and_drop_helper.js" ),
                 FileChanges(  0, 66, "scripts/dragdrop_pin_to_assemble.js" ),
                 FileChanges( 23, 16, "src/step_definitions/StepDef.java" ),
             ]
         ) ),
-        str( git.show( "2993bdfAAAAAAAAAAAA" ) )
+        str( git.show( "2993bdfAAAAAAAAAAAA", "dt", "auth" ) )
     )

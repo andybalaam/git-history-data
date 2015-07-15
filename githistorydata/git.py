@@ -22,10 +22,12 @@ class Git( object ):
             if ln.strip() != ""
         )
 
-    def show( self, commit_hash ):
+    def show( self, commit_hash, date, author ):
         show_lines = self.raw_git.git_show_numstat( commit_hash )
         return CommitDetail(
             commit_hash,
+            date,
+            author,
             list( self._showline( l ) for l in show_lines[1:] if l != "")
         )
 
@@ -47,8 +49,15 @@ class Git( object ):
         )
 
     showline_re = re.compile(
-        r"(\d+)\s+(\d+)\s+(.*)"
+        r"(-|\d+)\s+(-|\d+)\s+(.*)"
     )
+
+    @staticmethod
+    def lines_changed( num ):
+        if num == "-":
+            return 0
+        else:
+            return int( num )
 
     def _showline( self, ln ):
         m = Git.showline_re.match( ln )
@@ -58,7 +67,7 @@ class Git( object ):
                 % ln
             )
         return FileChanges(
-            int( m.group( 1 ) ),
-            int( m.group( 2 ) ),
+            Git.lines_changed( m.group( 1 ) ),
+            Git.lines_changed( m.group( 2 ) ),
             m.group( 3 )
         )
