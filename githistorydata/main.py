@@ -13,7 +13,7 @@ def main( argv, out, err ):
         git = Git( RawGit() )
         csv = Csv(
             out,
-            ( "Hash", "Date", "Author", "Added", "Removed", "File" )
+            ( "Commit", "Date", "Author", "Added", "Removed", "File" )
         )
         for cod in expand_lines( git, expand_authors( git.log() ) ):
             csv.line( (
