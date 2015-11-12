@@ -24,8 +24,8 @@ def main( argv, out, err ):
                 cod.removed,
                 cod.filename,
             ) )
-    except subprocess.CalledProcessError, e:
-        print str( e )
+    except subprocess.CalledProcessError as e:
+        print(str( e ))
         sys.exit( 1 )
     finally:
         out.flush()

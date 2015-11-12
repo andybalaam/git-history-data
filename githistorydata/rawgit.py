@@ -15,4 +15,5 @@ class RawGit( object ):
     def _run_git( self, args ):
         return subprocess.check_output(
             ["/usr/bin/git"] + args
-        ).split( "\n" )
+        ).decode( encoding="UTF-8", errors="replace" ).split( "\n" )
+

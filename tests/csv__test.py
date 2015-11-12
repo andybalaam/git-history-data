@@ -1,5 +1,5 @@
 
-from cStringIO import StringIO
+from io import StringIO
 from githistorydata.csv import Csv
 
 from nose.tools import assert_equal
