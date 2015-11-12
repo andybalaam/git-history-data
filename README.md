@@ -50,7 +50,7 @@ Get the code:
 
 Now add a line to your PATH by doing something like this:
 
-    echo 'PATH="$PATH:${HOME}/git-history-data' >> ~/.bashrc
+    echo 'export PATH="$PATH:${HOME}/git-history-data' >> ~/.bashrc
 
 (Log out and back in again, and use `echo $PATH` to check your PATH has been updated.
 
