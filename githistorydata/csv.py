@@ -9,8 +9,10 @@ class Csv( object ):
         self._write( items )
 
     def _write( self, items ):
-        self.out.write( ", ".join( self._fmt( c ) for c in items ) )
-        self.out.write( "\n" )
+        self.out.write(
+            u", ".join( self._fmt( c ) for c in items ) )
+
+        self.out.write( u"\n" )
 
     def _fmt( self, item ):
         try:
