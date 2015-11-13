@@ -53,7 +53,7 @@ Now add a line to your PATH by doing something like this:
 
     echo 'export PATH="$PATH:${HOME}/git-history-data"' >> ~/.bashrc
 
-(Log out and back in again, and use `echo $PATH` to check your PATH has been updated.
+(Log out and back in again, and use `echo $PATH` to check your PATH has been updated.)
 
 ##Use
 
@@ -76,6 +76,6 @@ A good area to start contributing is to make a little script that analyses the d
 
 git-history-data is written by Andy Balaam and the git-history-data contributors.
 
-(c) Copyright 2015 IBM Corporation. Distributed under the [BSD 2-clause license](https://github.com/andybalaam/git-history-data/blob/master/LICENSE).
+(c) Copyright 2015 IBM Corporation and the git-history-data contributors. Distributed under the [BSD 2-clause license](https://github.com/andybalaam/git-history-data/blob/master/LICENSE).
 
 For more open-source projects from IBM, head over to (http://ibm.github.io).
