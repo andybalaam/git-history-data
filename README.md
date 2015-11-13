@@ -1,4 +1,4 @@
-!git-history-data
+#git-history-data
 
 git-history-data analyses a Git source code repository and dumps out data in a form that is easy to analyse. In its simplest form it prints out one line for every change to every file in history, and who made the change, like this:
 
@@ -36,13 +36,13 @@ Or the files with terrifying numbers of authors:
     130 "git-svn.perl"
     115 "diff.c"
 
-!!Prerequisites
+##Prerequisites
 
 git-history-data requires Git, Python 3 and the Python DateUtil library.  On Debian, Ubuntu and similar you can install these with:
 
     sudo apt-get install git python3 python3-dateutil
 
-!!Install
+##Install
 
 Get the code:
 
@@ -54,7 +54,7 @@ Now add a line to your PATH by doing something like this:
 
 (Log out and back in again, and use `echo $PATH` to check your PATH has been updated.
 
-!!Use
+##Use
 
 `cd` into the working tree of a git repository, and then run `git-history-data`, redirecting the result to a file.  For example:
 
