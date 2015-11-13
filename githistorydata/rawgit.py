@@ -7,7 +7,8 @@ class RawGit( object ):
         pass
 
     def git_log_pretty_tformat_H_ai_an( self ):
-        return self._run_git( ["log", "--pretty=tformat:%H %ai %an"] )
+        return self._run_git(
+            ["log", "--no-merges", "--pretty=tformat:%H %ai %an"] )
 
     def git_show_numstat( self, commit_hash ):
         return self._run_git( ["show", "--numstat", commit_hash] )
