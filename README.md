@@ -46,7 +46,8 @@ git-history-data requires Git, Python 3 and the Python DateUtil library.  On Deb
 
 Get the code:
 
-    TODO
+    cd
+    git clone https://github.com/andybalaam/git-history-data.git
 
 Now add a line to your PATH by doing something like this:
 
