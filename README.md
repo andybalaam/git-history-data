@@ -68,6 +68,6 @@ That's it.
 
 ##Contributing
 
-Before we can accept your pull request you must confirm that all your contributions are written by you.  To do this, create a pull request that adds a file inside the "legal" directory, creating a file called &lt;yourusername&gt;-DCO1.1.txt that is a copy of one of the other files in that directory.  Once that pull request has been accepted, we can accept other pull requests as normal.
+Before we can accept your pull request you must confirm that all your contributions are written by you.  To do this, create a pull request that adds a file inside the "legal" directory, creating a file called &lt;yourusername&gt;-DCO1.1.txt that is a copy of one of the other files in that directory.  Once that pull request has been accepted, we can accept other pull requests as normal.  If you work for IBM, contact Andy Balaam because there are a couple of other things you need to do.
 
 A good area to start contributing is to make a little script that analyses the data coming out of git-history-data and produces a little report (on the command line).  We plan to make a library of scripts that report e.g. which developer creates the most commits, which files are most frequently modified.
