@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# File and author
+# Unique
+# Group by file
+# Sort numerically
+
+tail -n +1 \
+    | awk -F', ' '{print $6, ", ", $3}' \
+    | sort | uniq \
+    | awk -F', ' '{arr[$1]++}END{for (a in arr) print arr[a], a}' \
+    | sort -n -r
+

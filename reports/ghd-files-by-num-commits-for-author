@@ -1,0 +1,17 @@
+#!/bin/bash
+
+AUTHOR="$1"
+
+# filter by author (TODO: do properly)
+# file
+# author-of-commit, num-files-in-commit
+# author, num-files
+# Group by author, mean-num-files
+# Sort numerically
+
+tail -n +1 \
+    | grep "${AUTHOR}" \
+    | awk -F', ' '{print $6}' \
+    | awk -F', ' '{arr[$1]++}END{for (a in arr) print arr[a], a}' \
+    | sort -n -r
+
