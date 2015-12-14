@@ -36,6 +36,8 @@ Or the files with terrifying numbers of authors:
     130 "git-svn.perl"
     115 "diff.c"
 
+You can find more examples here: <a href="https://developer.ibm.com/open/2015/12/11/learning-about-the-git-codebase-using-git-history-data/">Learning about the Git codebase using git-history-data</a>
+
 ##Prerequisites
 
 git-history-data requires Git, Python 3 and the Python DateUtil library.  On Debian, Ubuntu and similar you can install these with:
