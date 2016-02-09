@@ -11,7 +11,8 @@ class RawGit( object ):
             ["log", "--no-merges", "--pretty=tformat:%H %ai %an"] )
 
     def git_show_numstat( self, commit_hash ):
-        return self._run_git( ["show", "--numstat", commit_hash] )
+        return self._run_git(
+            ["show", "--pretty=oneline", "--numstat", commit_hash] )
 
     def _run_git( self, args ):
         return subprocess.check_output(

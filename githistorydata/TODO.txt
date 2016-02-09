@@ -1,0 +1,11 @@
+
+
+- Release
+
+- Avoid hard-coding git executable location
+- Clean environment when running Git using:
+  GIT_CONFIG_NOSYSTEM=true HOME=/dev/null XDG_CONFIG_HOME=/dev/null
++ Fix bug (#1) where git show command assumed --pretty=oneline
+
++ Initial release
+
