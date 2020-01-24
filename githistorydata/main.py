@@ -6,11 +6,13 @@ from githistorydata.csv import Csv
 from githistorydata.expand_commits import expand_authors, expand_lines
 from githistorydata.git import Git
 from githistorydata.rawgit import RawGit
+from githistorydata.settings import Settings
 
 
 def main( argv, out, err ):
+    settings = Settings()
     try:
-        git = Git( RawGit() )
+        git = Git( RawGit(settings["git_path"]) )
         csv = Csv(
             out,
             ( "Commit", "Date", "Author", "Added", "Removed", "File" )
