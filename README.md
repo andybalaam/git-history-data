@@ -1,4 +1,4 @@
-#git-history-data
+# git-history-data
 
 git-history-data analyses a Git source code repository and dumps out data in a form that is easy to analyse. In its simplest form it prints out one line for every change to every file in history, and who made the change, like this:
 
