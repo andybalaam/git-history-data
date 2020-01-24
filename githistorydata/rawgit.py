@@ -3,8 +3,8 @@ import subprocess
 
 
 class RawGit( object ):
-    def __init__( self ):
-        pass
+    def __init__( self, git_path="/usr/bin/git" ):
+        self._git_path = git_path
 
     def git_log_pretty_tformat_H_ai_an( self ):
         return self._run_git(
@@ -16,6 +16,6 @@ class RawGit( object ):
 
     def _run_git( self, args ):
         return subprocess.check_output(
-            ["/usr/bin/git"] + args
+            [self._git_path] + args
         ).decode( encoding="UTF-8", errors="replace" ).split( "\n" )
 
