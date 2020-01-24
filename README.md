@@ -14,7 +14,7 @@ git-history-data analyses a Git source code repository and dumps out data in a f
     "8fd2224", "2015-07-13", "Andy",   18,      0,         "githistorydata/commitdetail.py"
 
 
-It is intended to be easy to analyse the results in a tool such as [Watson Analytics](http://watsonanalytics.com), and to be convenient to manipulate with standard Unix command-line tools.
+It is intended to be easy to analyse the results, and to be convenient to manipulate with standard Unix command-line tools.
 
 For example, if you want to see very large changes to a specific file (in the Git project itself):
 
@@ -36,7 +36,7 @@ Or the files with terrifying numbers of authors:
     130 "git-svn.perl"
     115 "diff.c"
 
-You can find more examples here: <a href="https://developer.ibm.com/open/2015/12/11/learning-about-the-git-codebase-using-git-history-data/">Learning about the Git codebase using git-history-data</a>
+You can find more examples here: <a href="https://web.archive.org/web/20161216005139/https://developer.ibm.com/open/2015/12/11/learning-about-the-git-codebase-using-git-history-data/">Learning about the Git codebase using git-history-data</a>
 
 ## Prerequisites
 
