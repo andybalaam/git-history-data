@@ -38,13 +38,13 @@ Or the files with terrifying numbers of authors:
 
 You can find more examples here: <a href="https://developer.ibm.com/open/2015/12/11/learning-about-the-git-codebase-using-git-history-data/">Learning about the Git codebase using git-history-data</a>
 
-##Prerequisites
+## Prerequisites
 
 git-history-data requires Git, Python 3 and the Python DateUtil library.  On Debian, Ubuntu and similar you can install these with:
 
     sudo apt-get install git python3 python3-dateutil
 
-##Install
+## Install
 
 Get the code:
 
@@ -57,7 +57,7 @@ Now add a line to your PATH by doing something like this:
 
 (Log out and back in again, and use `echo $PATH` to check your PATH has been updated.)
 
-##Use
+## Use
 
 `cd` into the working tree of a git repository, and then run `git-history-data`, redirecting the result to a file.  For example:
 
@@ -68,13 +68,13 @@ Now hist.csv contains one line per file per commit in the entire history of the 
 
 That's it.
 
-##Contributing
+## Contributing
 
 Before we can accept your pull request you must confirm that all your contributions are written by you.  To do this, create a pull request that adds a file inside the `legal` directory, creating a file called `<yourusername>-DCO1.1.txt` that is a copy of one of the other files in that directory.  Once that pull request has been accepted, we can accept other pull requests as normal.  If you work for IBM, contact Andy Balaam because there are a couple of other things you need to do.
 
 A good area to start contributing is to make a little script that analyses the data coming out of git-history-data and produces a little report (on the command line).  We plan to make a library of scripts that report e.g. which developer creates the most commits, which files are most frequently modified.
 
-##Copyright
+## Copyright
 
 git-history-data is written by Andy Balaam and the git-history-data contributors.
 
