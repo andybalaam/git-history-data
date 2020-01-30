@@ -80,4 +80,4 @@ A good area to start contributing is to make a little script that analyses the d
 
 git-history-data is written by Andy Balaam and the git-history-data contributors.
 
-(c) Copyright 2015 IBM Corporation, Andy Balaam and the git-history-data contributors. Distributed under the [BSD 2-clause license](https://github.com/andybalaam/git-history-data/blob/master/LICENSE).
+(c) Copyright 2015-2020 IBM Corporation, Andy Balaam and the git-history-data contributors. Distributed under the [BSD 2-clause license](https://github.com/andybalaam/git-history-data/blob/master/LICENSE).
