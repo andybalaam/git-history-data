@@ -70,7 +70,9 @@ That's it.
 
 ## Contributing
 
-Before we can accept your pull request you must confirm that all your contributions are written by you.  To do this, create a pull request that adds a file inside the `legal` directory, creating a file called `<yourusername>-DCO1.1.txt` that is a copy of one of the other files in that directory.  Once that pull request has been accepted, we can accept other pull requests as normal.  If you work for IBM, contact Andy Balaam because there are a couple of other things you need to do.
+We welcome contributions!
+
+Before we can accept your pull request you must confirm that all your contributions are written by you.  To do this, create a pull request that adds a file inside the `legal` directory, creating a file called `<yourusername>-DCO1.1.txt` that is a copy of one of the other files in that directory.  Once that pull request has been accepted, we can accept other pull requests as normal.
 
 A good area to start contributing is to make a little script that analyses the data coming out of git-history-data and produces a little report (on the command line).  We plan to make a library of scripts that report e.g. which developer creates the most commits, which files are most frequently modified.
 
@@ -78,6 +80,4 @@ A good area to start contributing is to make a little script that analyses the d
 
 git-history-data is written by Andy Balaam and the git-history-data contributors.
 
-(c) Copyright 2015 IBM Corporation and the git-history-data contributors. Distributed under the [BSD 2-clause license](https://github.com/andybalaam/git-history-data/blob/master/LICENSE).
-
-For more open-source projects from IBM, head over to (http://ibm.github.io).
+(c) Copyright 2015 IBM Corporation, Andy Balaam and the git-history-data contributors. Distributed under the [BSD 2-clause license](https://github.com/andybalaam/git-history-data/blob/master/LICENSE).
