@@ -1,10 +1,22 @@
+(Time flows upwards)
 
+- Release 1.0
 
-- Release
+- Create a standard report (HTML or Jupyter) so I can run 2 command
+  to learn a lot about my codebase.  Potential inspiration:
+  https://accu.org/index.php/journals/1835
 
-- Avoid hard-coding git executable location
+- Release 0.3
+
+- Create charts using something like Plotly https://plot.ly/python/
+- More reports - establish a "standard set" that covers
+  most things you want to know at a high level
+
+- Release 0.2
+
 - Clean environment when running Git using:
   GIT_CONFIG_NOSYSTEM=true HOME=/dev/null XDG_CONFIG_HOME=/dev/null
++ Avoid hard-coding git executable location
 + Fix bug (#1) where git show command assumed --pretty=oneline
 
 + Initial release
