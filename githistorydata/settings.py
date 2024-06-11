@@ -12,8 +12,11 @@ class Settings:
 
     def load(self):
         """ Load settings from file """
-        with open(self._settings_file_path) as f:
-            self._settings_dict = dict(self._settings_dict, **json.load(f))
+        try:
+            with open(self._settings_file_path) as f:
+                self._settings_dict = dict(self._settings_dict, **json.load(f))
+        except:
+            self._settings_dict = { "git_path": "/usr/bin/git" }
 
     def add(self, settings):
         """ Add one or more extra settings to this object without persisting them.
